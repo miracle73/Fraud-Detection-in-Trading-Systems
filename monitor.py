@@ -1,18 +1,3 @@
-#!/bin/bash
-echo "🚀 Setting up Market Data Collector..."
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Create data directory
-mkdir -p data
-
-# Install screen for persistent sessions
-sudo apt-get update -qq
-sudo apt-get install -y screen
-
-# Create a simple monitoring script
-cat > monitor.py << 'EOF'
 import json
 import os
 import pandas as pd
@@ -50,11 +35,3 @@ def check_progress():
 
 if __name__ == "__main__":
     check_progress()
-EOF
-
-echo "✅ Setup complete! Ready to run data collection."
-echo ""
-echo "📋 Available commands:"
-echo "  ./start_collection.sh  - Start data collection"
-echo "  python monitor.py      - Check progress"
-echo "  screen -r data_collection - Reconnect to running session"
