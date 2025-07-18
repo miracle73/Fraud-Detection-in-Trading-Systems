@@ -1,8 +1,8 @@
 {
   "total_collected": 1000,
-  "last_update": "2025-07-16T10:45:50.193579",
+  "last_update": "2025-07-17T10:31:56.247190",
   "target_rows": 1000,
   "max_runtime_hours": 12,
-  "elapsed_hours": 0.48419922199514176,
+  "elapsed_hours": 0.4841929268836975,
   "completion_percentage": 100.0
 }
