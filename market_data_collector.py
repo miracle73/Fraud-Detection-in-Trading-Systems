@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 class EnhancedMarketDataCollector:
-    def __init__(self, target_rows: int = 1000, max_runtime_hours: int = 12):
+    def __init__(self, target_rows: int = 10000, max_runtime_hours: int = 12):
         # Expanded symbol list for faster data collection
         self.large_cap = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'NVDA', 'NFLX']
         self.mid_cap = ['AMD', 'CRM', 'UBER', 'ABNB', 'COIN', 'ROKU', 'SQ', 'PYPL']
@@ -372,7 +372,7 @@ class EnhancedMarketDataCollector:
 
 def main():
     """Main execution function"""
-    target_rows = 1000  # 🎯 CHANGED FROM 50000 to 1000
+    target_rows = 10000  # 🎯 CHANGED FROM 50000 to 10000
     max_runtime_hours = 12  # ⏰ Maximum runtime in hours
 
     print(f"🚀 Starting Market Data Collection")
