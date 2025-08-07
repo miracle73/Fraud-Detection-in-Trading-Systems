@@ -1,0 +1,113 @@
+2025-08-07 02:38:30,143 - INFO - 🎯 Initializing Fraud Detection Training System
+2025-08-07 02:38:30,143 - INFO - 🚀 Initializing Comprehensive Fraud Detection Training System
+2025-08-07 02:38:30,143 - INFO - 🚀 Starting Complete Fraud Detection Training Pipeline
+2025-08-07 02:38:30,143 - INFO - ================================================================================
+2025-08-07 02:38:30,143 - INFO - 🔄 Data Loading & Preprocessing...
+2025-08-07 02:38:30,143 - INFO - 📊 Loading and preprocessing data...
+2025-08-07 02:38:30,217 - INFO - ✅ Data loaded: 36653 rows, 21 columns
+2025-08-07 02:38:30,217 - INFO - Data shape: (36653, 21)
+2025-08-07 02:38:30,224 - INFO - Missing values: 45810
+2025-08-07 02:38:30,250 - INFO - Available features: 20
+2025-08-07 02:38:30,254 - INFO - 🚨 Fraud cases: 13748 (37.51%)
+2025-08-07 02:38:30,254 - INFO - ✅ Normal cases: 22905 (62.49%)
+2025-08-07 02:38:30,254 - INFO - ✅ Data Loading & Preprocessing completed
+2025-08-07 02:38:30,254 - INFO - 🔄 Data Splitting & Scaling...
+2025-08-07 02:38:30,254 - INFO - 🔄 Splitting and scaling data...
+2025-08-07 02:38:30,290 - INFO - Training set: 29322 samples
+2025-08-07 02:38:30,290 - INFO - Test set: 7331 samples
+2025-08-07 02:38:30,290 - INFO - Features: 20
+2025-08-07 02:38:30,290 - INFO - ✅ Data Splitting & Scaling completed
+2025-08-07 02:38:30,291 - INFO - 🔄 Model Initialization...
+2025-08-07 02:38:30,291 - INFO - 🤖 Initializing ML models...
+2025-08-07 02:38:30,291 - INFO - ✅ Initialized 7 models
+2025-08-07 02:38:30,291 - INFO - ✅ Model Initialization completed
+2025-08-07 02:38:30,291 - INFO - 🔄 Individual Model Training...
+2025-08-07 02:38:30,291 - INFO - 🎯 Starting individual model training...
+2025-08-07 02:38:30,291 - INFO - 🔄 Training RANDOM_FOREST...
+2025-08-07 02:38:31,003 - INFO - ✅ RANDOM_FOREST completed - Accuracy: 1.0000, F1-Score: 1.0000, Time: 0.71s
+2025-08-07 02:38:31,003 - INFO - 🔄 Training XGBOOST...
+2025-08-07 02:38:31,307 - INFO - ✅ XGBOOST completed - Accuracy: 1.0000, F1-Score: 1.0000, Time: 0.30s
+2025-08-07 02:38:31,307 - INFO - 🔄 Training SVM...
+2025-08-07 02:38:34,832 - INFO - ✅ SVM completed - Accuracy: 0.9997, F1-Score: 0.9996, Time: 3.53s
+2025-08-07 02:38:34,832 - INFO - 🔄 Training LOGISTIC_REGRESSION...
+2025-08-07 02:38:35,342 - INFO - ✅ LOGISTIC_REGRESSION completed - Accuracy: 1.0000, F1-Score: 1.0000, Time: 0.51s
+2025-08-07 02:38:35,343 - INFO - 🔄 Training NEURAL_NETWORK...
+2025-08-07 02:38:38,088 - INFO - ✅ NEURAL_NETWORK completed - Accuracy: 0.9996, F1-Score: 0.9995, Time: 2.74s
+2025-08-07 02:38:38,088 - INFO - 🔄 Training DECISION_TREE...
+2025-08-07 02:38:38,143 - INFO - ✅ DECISION_TREE completed - Accuracy: 1.0000, F1-Score: 1.0000, Time: 0.06s
+2025-08-07 02:38:38,144 - INFO - 🔄 Training ADABOOST...
+2025-08-07 02:38:38,190 - INFO - ✅ ADABOOST completed - Accuracy: 1.0000, F1-Score: 1.0000, Time: 0.05s
+2025-08-07 02:38:38,190 - INFO - ✅ Individual model training completed
+2025-08-07 02:38:38,191 - INFO - ✅ Individual Model Training completed
+2025-08-07 02:38:38,191 - INFO - 🔄 Ensemble Model Training...
+2025-08-07 02:38:38,191 - INFO - 🎪 Training ensemble models...
+2025-08-07 02:39:05,790 - INFO - ✅ Ensemble model completed - Accuracy: 0.9986, F1-Score: 0.9982
+2025-08-07 02:39:05,790 - INFO - ✅ Ensemble Model Training completed
+2025-08-07 02:39:05,790 - INFO - 🔄 Unsupervised Model Training...
+2025-08-07 02:39:05,790 - INFO - 🔍 Training unsupervised anomaly detection models...
+2025-08-07 02:39:05,790 - INFO - 🔄 Training ISOLATION_FOREST...
+2025-08-07 02:39:06,195 - INFO - ✅ ISOLATION_FOREST completed - Accuracy: 0.6692, F1-Score: 0.5661
+2025-08-07 02:39:06,195 - INFO - 🔄 Training LOCAL_OUTLIER_FACTOR...
+2025-08-07 02:39:09,901 - INFO - ✅ LOCAL_OUTLIER_FACTOR completed - Accuracy: 0.4829, F1-Score: 0.3383
+2025-08-07 02:39:09,902 - INFO - ✅ Unsupervised Model Training completed
+2025-08-07 02:39:09,902 - INFO - 🔄 Hyperparameter Tuning...
+2025-08-07 02:39:09,902 - INFO - ⚙️ Starting hyperparameter tuning...
+2025-08-07 02:39:09,902 - INFO - 🎯 Tuning RANDOM_FOREST...
+2025-08-07 02:40:03,735 - INFO - ✅ random_forest_tuned - Best F1: 1.0000
+2025-08-07 02:40:03,735 - INFO - 🎯 Tuning XGBOOST...
+2025-08-07 02:40:15,750 - INFO - ✅ xgboost_tuned - Best F1: 1.0000
+2025-08-07 02:40:15,750 - INFO - ✅ Hyperparameter Tuning completed
+2025-08-07 02:40:15,750 - INFO - 🔄 Report Generation...
+2025-08-07 02:40:15,750 - INFO - 📊 Generating comprehensive report...
+2025-08-07 02:40:15,751 - INFO - 🏆 TRAINING RESULTS SUMMARY
+2025-08-07 02:40:15,751 - INFO - ============================================================
+2025-08-07 02:40:15,751 - INFO - 1. RANDOM_FOREST
+2025-08-07 02:40:15,751 - INFO -    Accuracy: 1.0000 | F1-Score: 1.0000
+2025-08-07 02:40:15,751 - INFO -    Precision: 1.0000 | Recall: 1.0000
+2025-08-07 02:40:15,751 - INFO -    ROC-AUC: 1.0000 | Time: 0.71s
+2025-08-07 02:40:15,751 - INFO - ----------------------------------------
+2025-08-07 02:40:15,752 - INFO - 2. XGBOOST
+2025-08-07 02:40:15,752 - INFO -    Accuracy: 1.0000 | F1-Score: 1.0000
+2025-08-07 02:40:15,752 - INFO -    Precision: 1.0000 | Recall: 1.0000
+2025-08-07 02:40:15,752 - INFO -    ROC-AUC: 1.0000 | Time: 0.30s
+2025-08-07 02:40:15,752 - INFO - ----------------------------------------
+2025-08-07 02:40:15,752 - INFO - 3. LOGISTIC_REGRESSION
+2025-08-07 02:40:15,752 - INFO -    Accuracy: 1.0000 | F1-Score: 1.0000
+2025-08-07 02:40:15,752 - INFO -    Precision: 1.0000 | Recall: 1.0000
+2025-08-07 02:40:15,752 - INFO -    ROC-AUC: 1.0000 | Time: 0.51s
+2025-08-07 02:40:15,752 - INFO - ----------------------------------------
+2025-08-07 02:40:15,752 - INFO - 4. DECISION_TREE
+2025-08-07 02:40:15,752 - INFO -    Accuracy: 1.0000 | F1-Score: 1.0000
+2025-08-07 02:40:15,752 - INFO -    Precision: 1.0000 | Recall: 1.0000
+2025-08-07 02:40:15,752 - INFO -    ROC-AUC: 1.0000 | Time: 0.05s
+2025-08-07 02:40:15,752 - INFO - ----------------------------------------
+2025-08-07 02:40:15,752 - INFO - 5. ADABOOST
+2025-08-07 02:40:15,753 - INFO -    Accuracy: 1.0000 | F1-Score: 1.0000
+2025-08-07 02:40:15,753 - INFO -    Precision: 1.0000 | Recall: 1.0000
+2025-08-07 02:40:15,753 - INFO -    ROC-AUC: 1.0000 | Time: 0.05s
+2025-08-07 02:40:15,753 - INFO - ----------------------------------------
+2025-08-07 02:40:15,753 - INFO - 🎯 BEST MODEL: RANDOM_FOREST
+2025-08-07 02:40:15,753 - INFO - ⏱️  TOTAL TRAINING TIME: 0.03 hours
+2025-08-07 02:40:15,753 - INFO - 📊 MODELS TRAINED: 12
+2025-08-07 02:40:15,753 - INFO - ✅ Report Generation completed
+2025-08-07 02:40:15,753 - INFO - 🔄 Save Progress...
+2025-08-07 02:40:15,753 - INFO - 💾 Saving all models and progress...
+2025-08-07 02:40:15,777 - INFO - ✅ Saved random_forest to trained_models/random_forest_model.joblib
+2025-08-07 02:40:15,779 - INFO - ✅ Saved xgboost to trained_models/xgboost_model.joblib
+2025-08-07 02:40:15,780 - INFO - ✅ Saved svm to trained_models/svm_model.joblib
+2025-08-07 02:40:15,781 - INFO - ✅ Saved logistic_regression to trained_models/logistic_regression_model.joblib
+2025-08-07 02:40:15,783 - INFO - ✅ Saved neural_network to trained_models/neural_network_model.joblib
+2025-08-07 02:40:15,783 - INFO - ✅ Saved decision_tree to trained_models/decision_tree_model.joblib
+2025-08-07 02:40:15,784 - INFO - ✅ Saved adaboost to trained_models/adaboost_model.joblib
+2025-08-07 02:40:15,846 - INFO - ✅ Saved ensemble_voting to trained_models/ensemble_voting_model.joblib
+2025-08-07 02:40:15,881 - INFO - ✅ Saved isolation_forest to trained_models/isolation_forest_model.joblib
+2025-08-07 02:40:15,887 - INFO - ✅ Saved local_outlier_factor to trained_models/local_outlier_factor_model.joblib
+2025-08-07 02:40:15,900 - INFO - ✅ Saved random_forest_tuned to trained_models/random_forest_tuned_model.joblib
+2025-08-07 02:40:15,901 - INFO - ✅ Saved xgboost_tuned to trained_models/xgboost_tuned_model.joblib
+2025-08-07 02:40:15,902 - INFO - ✅ All models and progress saved successfully
+2025-08-07 02:40:15,902 - INFO - ✅ Save Progress completed
+2025-08-07 02:40:15,902 - INFO - 🎉 TRAINING PIPELINE COMPLETED!
+2025-08-07 02:40:15,902 - INFO - ⏱️  Total Time: 0.03 hours
+2025-08-07 02:40:15,902 - INFO - 📊 Check 'fraud_detection_training_report.json' for detailed results
+2025-08-07 02:40:15,902 - INFO - 💾 Models saved in 'trained_models/' directory
+2025-08-07 02:40:15,902 - INFO - 🎉 Training completed successfully!
