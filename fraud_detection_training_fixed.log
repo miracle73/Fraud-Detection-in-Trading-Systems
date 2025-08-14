@@ -1,0 +1,127 @@
+2025-08-14 13:36:12,598 - INFO - 🚀 Fixed Fraud Detection Training System (No Data Leakage)
+2025-08-14 13:36:12,598 - INFO - 🚀 Starting FIXED Fraud Detection Training Pipeline
+2025-08-14 13:36:12,598 - INFO - 📋 Key Fixes:
+2025-08-14 13:36:12,598 - INFO -    ✅ Removed data leakage features
+2025-08-14 13:36:12,598 - INFO -    ✅ Temporal data splitting
+2025-08-14 13:36:12,598 - INFO -    ✅ Strong model regularization
+2025-08-14 13:36:12,598 - INFO -    ✅ Validation monitoring
+2025-08-14 13:36:12,598 - INFO - ================================================================================
+2025-08-14 13:36:12,598 - INFO - 🔄 Load Clean Data...
+2025-08-14 13:36:12,599 - INFO - 📊 Loading clean data (no leakage features)...
+2025-08-14 13:36:12,662 - INFO - ✅ Clean data loaded: 36653 rows, 19 columns
+2025-08-14 13:36:12,743 - INFO - Using 11 safe features: ['hour', 'minute', 'is_opening_hour', 'is_closing_hour', 'is_pre_market', 'day_of_week', 'month', 'symbol_encoded', 'session_type_encoded', 'price_zscore', 'volume_zscore']
+2025-08-14 13:36:12,745 - INFO - 🚨 Fraud cases: 13748 (37.51%)
+2025-08-14 13:36:12,745 - INFO - ✅ Normal cases: 22905 (62.49%)
+2025-08-14 13:36:12,745 - WARNING - ⚠️ HIGH FRAUD RATE: 37.5% (real-world ~1-2%)
+2025-08-14 13:36:12,745 - INFO - ✅ Load Clean Data completed
+2025-08-14 13:36:12,745 - INFO - 🔄 Temporal Data Split...
+2025-08-14 13:36:12,745 - INFO - 🔄 Splitting data temporally (no random splits)...
+2025-08-14 13:36:12,755 - INFO - ✅ Data sorted by timestamp
+2025-08-14 13:36:12,765 - INFO - Training set: 21991 samples (fraud: 0.393)
+2025-08-14 13:36:12,765 - INFO - Validation set: 7331 samples (fraud: 0.080)
+2025-08-14 13:36:12,766 - INFO - Test set: 7331 samples (fraud: 0.618)
+2025-08-14 13:36:12,766 - INFO - Features: 11
+2025-08-14 13:36:12,766 - INFO - ✅ Temporal Data Split completed
+2025-08-14 13:36:12,766 - INFO - 🔄 Initialize Models...
+2025-08-14 13:36:12,766 - INFO - 🤖 Initializing models with strong regularization...
+2025-08-14 13:36:12,766 - INFO - ✅ Initialized 5 regularized models
+2025-08-14 13:36:12,766 - INFO - ✅ Initialize Models completed
+2025-08-14 13:36:12,766 - INFO - 🔄 Train with Validation...
+2025-08-14 13:36:12,766 - INFO - 🎯 Training with validation monitoring...
+2025-08-14 13:36:12,766 - INFO - 🔄 Training LOGISTIC_REGRESSION...
+2025-08-14 13:36:13,042 - INFO - ✅ LOGISTIC_REGRESSION
+2025-08-14 13:36:13,043 - INFO -    Train Acc: 0.877 | Val Acc: 0.814 | Test Acc: 0.594
+2025-08-14 13:36:13,043 - INFO -    Train F1: 0.852 | Val F1: 0.000 | Test F1: 0.713
+2025-08-14 13:36:13,043 - INFO -    Overfitting Gap: 0.062 | Time: 0.28s
+2025-08-14 13:36:13,043 - INFO - 🔄 Training RANDOM_FOREST...
+2025-08-14 13:36:13,216 - INFO - ✅ RANDOM_FOREST
+2025-08-14 13:36:13,216 - INFO -    Train Acc: 0.906 | Val Acc: 0.948 | Test Acc: 0.618
+2025-08-14 13:36:13,216 - INFO -    Train F1: 0.893 | Val F1: 0.734 | Test F1: 0.764
+2025-08-14 13:36:13,216 - INFO -    Overfitting Gap: -0.042 | Time: 0.17s
+2025-08-14 13:36:13,216 - INFO - 🔄 Training SVM...
+2025-08-14 13:36:59,141 - INFO - ✅ SVM
+2025-08-14 13:36:59,141 - INFO -    Train Acc: 0.894 | Val Acc: 0.949 | Test Acc: 0.618
+2025-08-14 13:36:59,141 - INFO -    Train F1: 0.881 | Val F1: 0.744 | Test F1: 0.764
+2025-08-14 13:36:59,141 - INFO -    Overfitting Gap: -0.055 | Time: 45.92s
+2025-08-14 13:36:59,141 - INFO - 🔄 Training XGBOOST...
+2025-08-14 13:36:59,430 - INFO - ✅ XGBOOST
+2025-08-14 13:36:59,430 - INFO -    Train Acc: 0.607 | Val Acc: 0.920 | Test Acc: 0.382
+2025-08-14 13:36:59,430 - INFO -    Train F1: 0.000 | Val F1: 0.000 | Test F1: 0.000
+2025-08-14 13:36:59,430 - INFO -    Overfitting Gap: -0.312 | Time: 0.29s
+2025-08-14 13:36:59,430 - INFO - 🔄 Training DECISION_TREE...
+2025-08-14 13:36:59,469 - INFO - ✅ DECISION_TREE
+2025-08-14 13:36:59,469 - INFO -    Train Acc: 0.894 | Val Acc: 0.946 | Test Acc: 0.618
+2025-08-14 13:36:59,469 - INFO -    Train F1: 0.881 | Val F1: 0.719 | Test F1: 0.764
+2025-08-14 13:36:59,469 - INFO -    Overfitting Gap: -0.052 | Time: 0.04s
+2025-08-14 13:36:59,469 - INFO - ✅ Training with validation completed
+2025-08-14 13:36:59,469 - INFO - ✅ Train with Validation completed
+2025-08-14 13:36:59,470 - INFO - 🔄 Cross-Validation...
+2025-08-14 13:36:59,470 - INFO - 🔄 Running Time Series Cross-Validation...
+2025-08-14 13:37:01,187 - INFO - 📊 LOGISTIC_REGRESSION CV F1: 0.328 ± 0.301
+2025-08-14 13:37:01,677 - INFO - 📊 RANDOM_FOREST CV F1: 0.588 ± 0.340
+2025-08-14 13:38:51,669 - INFO - 📊 SVM CV F1: 0.592 ± 0.341
+2025-08-14 13:38:51,916 - INFO - 📊 XGBOOST CV F1: 0.435 ± 0.399
+2025-08-14 13:38:52,072 - INFO - 📊 DECISION_TREE CV F1: 0.587 ± 0.341
+2025-08-14 13:38:52,072 - INFO - ✅ Cross-Validation completed
+2025-08-14 13:38:52,073 - INFO - 🔄 Generate Report...
+2025-08-14 13:38:52,073 - INFO - 📋 Generating final performance report...
+2025-08-14 13:38:52,073 - INFO - ================================================================================
+2025-08-14 13:38:52,073 - INFO - 🏆 FINAL MODEL RANKINGS (by Validation F1)
+2025-08-14 13:38:52,073 - INFO - ================================================================================
+2025-08-14 13:38:52,073 - INFO - #1. SVM
+2025-08-14 13:38:52,073 - INFO -    📊 Validation Performance:
+2025-08-14 13:38:52,073 - INFO -       Accuracy: 0.949 | F1: 0.744
+2025-08-14 13:38:52,073 - INFO -       Precision: 0.621 | Recall: 0.929
+2025-08-14 13:38:52,073 - INFO -    📊 Test Performance:
+2025-08-14 13:38:52,074 - INFO -       Accuracy: 0.618 | F1: 0.764
+2025-08-14 13:38:52,074 - INFO -    🎯 Overfitting Check: -0.055 ✅ Good
+2025-08-14 13:38:52,074 - INFO -    📊 Cross-Validation F1: 0.592 ± 0.341
+2025-08-14 13:38:52,074 - INFO - ----------------------------------------
+2025-08-14 13:38:52,074 - INFO - #2. RANDOM_FOREST
+2025-08-14 13:38:52,074 - INFO -    📊 Validation Performance:
+2025-08-14 13:38:52,074 - INFO -       Accuracy: 0.948 | F1: 0.734
+2025-08-14 13:38:52,074 - INFO -       Precision: 0.621 | Recall: 0.898
+2025-08-14 13:38:52,074 - INFO -    📊 Test Performance:
+2025-08-14 13:38:52,074 - INFO -       Accuracy: 0.618 | F1: 0.764
+2025-08-14 13:38:52,074 - INFO -    🎯 Overfitting Check: -0.042 ✅ Good
+2025-08-14 13:38:52,074 - INFO -    📊 Cross-Validation F1: 0.588 ± 0.340
+2025-08-14 13:38:52,074 - INFO - ----------------------------------------
+2025-08-14 13:38:52,074 - INFO - #3. DECISION_TREE
+2025-08-14 13:38:52,075 - INFO -    📊 Validation Performance:
+2025-08-14 13:38:52,075 - INFO -       Accuracy: 0.946 | F1: 0.719
+2025-08-14 13:38:52,075 - INFO -       Precision: 0.619 | Recall: 0.857
+2025-08-14 13:38:52,075 - INFO -    📊 Test Performance:
+2025-08-14 13:38:52,075 - INFO -       Accuracy: 0.618 | F1: 0.764
+2025-08-14 13:38:52,075 - INFO -    🎯 Overfitting Check: -0.052 ✅ Good
+2025-08-14 13:38:52,075 - INFO -    📊 Cross-Validation F1: 0.587 ± 0.341
+2025-08-14 13:38:52,075 - INFO - ----------------------------------------
+2025-08-14 13:38:52,075 - INFO - #4. LOGISTIC_REGRESSION
+2025-08-14 13:38:52,075 - INFO -    📊 Validation Performance:
+2025-08-14 13:38:52,075 - INFO -       Accuracy: 0.814 | F1: 0.000
+2025-08-14 13:38:52,075 - INFO -       Precision: 0.000 | Recall: 0.000
+2025-08-14 13:38:52,075 - INFO -    📊 Test Performance:
+2025-08-14 13:38:52,075 - INFO -       Accuracy: 0.594 | F1: 0.713
+2025-08-14 13:38:52,075 - INFO -    🎯 Overfitting Check: 0.062 ✅ Good
+2025-08-14 13:38:52,076 - INFO -    📊 Cross-Validation F1: 0.328 ± 0.301
+2025-08-14 13:38:52,076 - INFO - ----------------------------------------
+2025-08-14 13:38:52,076 - INFO - #5. XGBOOST
+2025-08-14 13:38:52,076 - INFO -    📊 Validation Performance:
+2025-08-14 13:38:52,076 - INFO -       Accuracy: 0.920 | F1: 0.000
+2025-08-14 13:38:52,076 - INFO -       Precision: 0.000 | Recall: 0.000
+2025-08-14 13:38:52,076 - INFO -    📊 Test Performance:
+2025-08-14 13:38:52,076 - INFO -       Accuracy: 0.382 | F1: 0.000
+2025-08-14 13:38:52,076 - INFO -    🎯 Overfitting Check: -0.312 ✅ Good
+2025-08-14 13:38:52,076 - INFO -    📊 Cross-Validation F1: 0.435 ± 0.399
+2025-08-14 13:38:52,076 - INFO - ----------------------------------------
+2025-08-14 13:38:52,076 - INFO - 🎯 BEST MODEL: SVM
+2025-08-14 13:38:52,076 - INFO - ⏱️  TOTAL TRAINING TIME: 2.7 minutes
+2025-08-14 13:38:52,077 - INFO - ✅ Generate Report completed
+2025-08-14 13:38:52,077 - INFO - 🔄 Save Progress...
+2025-08-14 13:38:52,077 - INFO - 💾 Saving models and results...
+2025-08-14 13:38:52,104 - INFO - ✅ All models and results saved to 'trained_models_fixed/'
+2025-08-14 13:38:52,104 - INFO - ✅ Save Progress completed
+2025-08-14 13:38:52,105 - INFO - ================================================================================
+2025-08-14 13:38:52,105 - INFO - 🎉 FIXED TRAINING PIPELINE COMPLETED!
+2025-08-14 13:38:52,105 - INFO - ⏱️  Total time: 2.7 minutes
+2025-08-14 13:38:52,105 - INFO - 📊 Results should now show realistic performance (70-85% accuracy)
+2025-08-14 13:38:52,106 - INFO - 💡 If performance is still too high, data may be synthetic

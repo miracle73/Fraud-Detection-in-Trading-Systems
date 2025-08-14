@@ -2,3 +2,5 @@ obselete_market_data_collector.py
 trained_models/
 training_metrics_visualization.png
 training_metrics.csv
+trained_models_fixed/
+training_logs/
